@@ -1,4 +1,4 @@
-option_lst = ["shuffle", "ordered", "unique"]
+option_lst = [None, "shuffle", "ordered", "unique"]
 
 def generator(text, sep=" ", option=None) :
     if not isinstance(text, str) or not option in option_lst :
@@ -22,9 +22,9 @@ def generator(text, sep=" ", option=None) :
         for elem in lst :
             yield elem
 
-# def main() :
-#     text = "Le Lorem Ipsum est simplement du faux texte."
-#     for word in generator(text, sep=" ", option="ordered") :
-#         print(word)
+def main() :
+    text = "Le Lorem Ipsum est simplement du faux texte."
+    for word in generator(text, sep=" ") :
+        print(word)
 
-# main()
+main()
